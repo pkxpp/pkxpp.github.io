@@ -21,7 +21,7 @@ newsourceroot: https://github.com/pkxpp/blog
 #duoshuo_shortname: pkxpp
 #duoshuo_url: "http://pkxpp.github.io/blog"
 # disqus.com commenting system. please note that it is exclusive with duoshuo.com
-disqus_shortname: pkxpp
+disqus_shortname: page
 disqus_url: "http://pkxpp.github.io/blog"
 #########################################
 

@@ -7,6 +7,7 @@ categories: tools
 ## 入门
 
 ###1.使用github page搭建一个简陋的个人博客
+
 （1）参考[1]
 
 （2）了解到了每个github帐号只能搭建一个博客，但是可以为每个项目单独简历一个博客，有两点需要注意：
@@ -14,7 +15,10 @@ categories: tools
 * github帐号唯一的博客的项目名需要是username.github.io的形式
 * 每个项目单独的博客需要简历一个分支，名字为gh-pages
 
+
 ###2.hexo
+
+
 （1）使用hexo搭建网站非常方便，参考[1]
 
 （2）常用命令
@@ -25,7 +29,11 @@ categories: tools
 
 （3）上传成功之后打开username.github.io就可以看到最新的网站了
 
+
+
 ###3.jekyll
+
+
 （1）还是决定使用jekyll，虽然hexo搭建和使用非常方便，但是现在网上的模版很少，而jekyll的模版非常多[http://jekyllthemes.org/](http://jekyllthemes.org/ "jekyllthemes")
 
 （2）操作
@@ -40,7 +48,10 @@ categories: tools
 
 参考[3]
 
+
 ##问题
+
+
 （1）本地测试localhost:4000没有反应
 
 * 原因：没有安装hexo-server
@@ -71,7 +82,9 @@ categories: tools
 * 原因：_config.yml格式上冒号后面需要空格，例如port: 5001
 * 解决：port:5001 --> port: 5001
 
+
 ##参考
+
 
 [1]http://www.jianshu.com/p/05289a4bc8b2
 
