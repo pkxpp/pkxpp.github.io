@@ -6,7 +6,7 @@ categories: tools
 
 ## 入门
 
-###1.使用github page搭建一个简陋的个人博客
+### 1.使用github page搭建一个简陋的个人博客
 
 （1）参考[1]
 
@@ -16,7 +16,7 @@ categories: tools
 * 每个项目单独的博客需要简历一个分支，名字为gh-pages
 
 
-###2.hexo
+### 2.hexo
 
 
 （1）使用hexo搭建网站非常方便，参考[1]
@@ -31,25 +31,34 @@ categories: tools
 
 
 
-###3.jekyll
+### 3.jekyll
 
 
 （1）还是决定使用jekyll，虽然hexo搭建和使用非常方便，但是现在网上的模版很少，而jekyll的模版非常多[http://jekyllthemes.org/](http://jekyllthemes.org/ "jekyllthemes")
 
-（2）操作
 
-* 选择一个github.io模版
+（2）安装
+
+* 参考[4]，有截图。对安装过程更有帮助
+* 先看参考[3]
+
+（3）操作
+
+* 使用jekyll new创建一个工程调试
+* 熟悉了基本框架之后，选择一个github.io模版
 * 修改成自己的
 * 使用命令：jekyll serve进行本地调试
 * 上传到username.github.io
 * 打开username.github.io就可以看到自己的网站了
 
-（3）安装
+（4）安装注意问题：
 
-参考[3]
+* 参考[3]前面写的一些更新之前没有注意，可以好好看一下
+* 关于config.yml
+ - 配置文件里面写的路径是ruby的安装路径根目录，而不是ruby-dev的；
+ - 路径用linux的斜杠方向
 
-
-##问题
+## 问题
 
 
 （1）本地测试localhost:4000没有反应
@@ -82,16 +91,30 @@ categories: tools
 * 原因：_config.yml格式上冒号后面需要空格，例如port: 5001
 * 解决：port:5001 --> port: 5001
 
+（6）选择国内淘宝镜像，执行命令报错
 
-##参考
+* 在自己window7下执行以下命令报错：
+```
+gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
+```
+如图所示：
+
+解决：
+* 参考[3]评论里面2楼的连接[4]
+* 最主要是虾米一段话
+> ruby 没有包含 SSL 证书，所以 https 的链接被服务器拒绝。解决方法很简单，首先在这里下载证书 http://curl.haxx.se/ca/cacert.pem, 然后再环境变量里设置 SSL_CERT_FILE 这个环境变量，并指向 cacert.pem 文件。
+set SSL_CERT_FILE=C:\path\to\cacert.pem
+* 重启cmd命令行搞定！f
+
+## 参考
 
 
-[1]http://www.jianshu.com/p/05289a4bc8b2
+[1](http://www.jianshu.com/p/05289a4bc8b2)
 
 [2][http://zhidao.baidu.com/link?url=k6epEW6_POVCf88EsosZz2LCyodSbglsdWLujEfXln5CapaLMWntPQq2RyDl0R-wRbgW7PCKeXV-J7v4UBtFS_ZskXzGiV6TSm_Nm_mXiK7](http://zhidao.baidu.com/link?url=k6epEW6_POVCf88EsosZz2LCyodSbglsdWLujEfXln5CapaLMWntPQq2RyDl0R-wRbgW7PCKeXV-J7v4UBtFS_ZskXzGiV6TSm_Nm_mXiK7 "hexo deploy报错")
 
-[3]http://www.pchou.info/web-build/2013/01/05/build-github-blog-page-04.html
+[3][一步步在GitHub上创建博客主页](http://www.pchou.info/web-build/2013/01/05/build-github-blog-page-04.html)
 
-[4]http://www.aichengxu.com/view/2404045
+[4][[前端]jekyll+markdown+github搭建个人博客](http://www.aichengxu.com/view/2404045)
 
-[5]http://www.pchou.info/web-build/2013/01/05/build-github-blog-page-04.html
+[5](http://www.pchou.info/web-build/2013/01/05/build-github-blog-page-04.html)
