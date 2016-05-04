@@ -94,9 +94,12 @@ categories: tools
 （6）选择国内淘宝镜像，执行命令报错
 
 * 在自己window7下执行以下命令报错：
+
 ```
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 ```
+
+
 如图所示：
 
 解决：
@@ -105,6 +108,20 @@ gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 > ruby 没有包含 SSL 证书，所以 https 的链接被服务器拒绝。解决方法很简单，首先在这里下载证书 http://curl.haxx.se/ca/cacert.pem, 然后再环境变量里设置 SSL_CERT_FILE 这个环境变量，并指向 cacert.pem 文件。
 set SSL_CERT_FILE=C:\path\to\cacert.pem
 * 重启cmd命令行搞定！f
+
+（7）文件名导致本地点击没有效果
+
+报错如下
+
+
+	[2016-05-04 09:52:05] ERROR '/favicon.ico' not found.
+	[2016-05-04 09:52:06] ERROR '/2016/05/03/lua学习笔记(2)-元方法/' not found.
+	[2016-05-04 09:52:06] ERROR '/favicon.ico' not found.
+	[2016-05-04 09:52:07] ERROR '/favicon.ico' not found.
+
+把名字改成lua学习笔记(2)-元方法x.md就可以了，说明还是和名字有关。猜想还是编码问题，比如中文在两个字节的编码，而utf-8是变长的导致不能够解析名字所以就出错了
+
+解决办法：
 
 ## 参考
 
