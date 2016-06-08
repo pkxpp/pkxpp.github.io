@@ -11,8 +11,14 @@ permalink: /projects/
 # All my projects
 Following are projects started by me. 
 
-## lua study
+## study
+
+### lua
+
 * Started: 2012-present
 * Website: 
+
+### c++
+* started: 2006-present
 
 lua study is formated by my work.

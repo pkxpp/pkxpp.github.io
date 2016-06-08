@@ -15,5 +15,5 @@ This is a personal website of page, created with github and jekyll.
 
 ## About me
 
-My primary research interest is in artificial intelligence, programming and education. See my project page for details.
+My primary research interest is in artificial intelligence, programming and game. See my project page for details.
 
