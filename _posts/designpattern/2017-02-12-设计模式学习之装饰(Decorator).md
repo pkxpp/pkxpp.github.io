@@ -54,7 +54,10 @@ categories: 设计模式
 
 
 ## 实现
-### C++
+### C++实现
+
+code: 
+
 	class WidgetBox{
 		void subscribe(event);
 		void unsubscribe(event);
@@ -94,6 +97,7 @@ categories: 设计模式
 ### 小结
 
 * 什么时候用装饰模式？
+
 > 1.在不影响其他对象的情况下，比如自己这里不能够改变现有的结构；
 > 2.当不能采用生成子类的方法进行扩充时，自己碰到的问题也算是；
 > 3.书上还提到：处理那些可以撤销的职责，这个没有用到。
