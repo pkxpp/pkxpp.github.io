@@ -195,12 +195,16 @@ wget https://fedoraproject.org/static/0608B895.txt
 mv 0608B895.txt /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
 ```
+
 * 验证：
+
 ```
 # rpm -qa gpg*
 gpg-pubkey-0608b895-4bd22942
 ```
+
 * 安装key
+
 ```
 rpm -ivh epel-release-6-5.noarch.rpm
 ```
