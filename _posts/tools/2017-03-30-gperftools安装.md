@@ -170,7 +170,7 @@ pprof分析：
 	sh: dot: command not found
 
 
-**原因**
+**原因:**
 
 graphviz没有安装，结果参照官网的过程根本就不成功，缺少libANN.so.1等的错误
 
@@ -213,36 +213,49 @@ yum install 'graphviz*'
 这里就直接ok了, bingo!!!
 
 * 但是，有些机器还是会报错
-```
-http://www.graphviz.org/pub/graphviz/stable/redhat/el6/i386/os/graphviz-2.40.20161221.0239-1.el6.i686.rpm: [Errno 14] PYCURL ERROR 22 - "The requested URL returned error: 404 Not Found"
-Trying other mirror.
 
-// 省略...
+部分报错信息如下：
 
-Error Downloading Packages:
-  graphviz-plugins-x-2.40.20161221.0239-1.el6.i686: failure: graphviz-plugins-x-2.40.20161221.0239-1.el6.i686.rpm from graphviz-stable: [Errno 256] No more mirrors to try.
-  graphviz-gd-2.40.20161221.0239-1.el6.i686: failure: graphviz-gd-2.40.20161221.0239-1.el6.i686.rpm from graphviz-stable: [Errno 256] No more mirrors to try.
-  graphviz-lang-java-2.40.20161221.0239-1.el6.i686: failure: graphviz-lang-java-2.40.20161221.0239-1.el6.i686.rpm from graphviz-stable: [Errno 256] No more mirrors to try.
-  // 省略...
-   graphviz-stable: [Errno 256] No more mirrors to try.
-  graphviz-plugins-gd-2.40.20161221.0239-1.el6.i686: failure: graphviz-plugins-gd-2.40.20161221.0239-1.el6.i686.rpm from graphviz-stable: [Errno 256] No more mirrors to try.
-```
+	http://www.graphviz.org/pub/graphviz/stable/redhat/el6/i386/os/graphviz-2.40.20161221.0239-1.el6.i686.rpm: [Errno 14] PYCURL ERROR 22 - "The requested URL returned error: 404 Not Found"
+	Trying other mirror.
+	
+	// 省略...
+
+	Error Downloading Packages:
+	  graphviz-plugins-x-2.40.20161221.0239-1.el6.i686: failure: graphviz-plugins-x-2.40.20161221.0239-1.el6.i686.rpm from graphviz-stable: [Errno 256] No more mirrors to try.
+	  graphviz-gd-2.40.20161221.0239-1.el6.i686: failure: graphviz-gd-2.40.20161221.0239-1.el6.i686.rpm from graphviz-stable: [Errno 256] No more mirrors to try.
+	  graphviz-lang-java-2.40.20161221.0239-1.el6.i686: failure: graphviz-lang-java-2.40.20161221.0239-1.el6.i686.rpm from graphviz-stable: [Errno 256] No more mirrors to try.
+	  // 省略...
+	   graphviz-stable: [Errno 256] No more mirrors to try.
+	  graphviz-plugins-gd-2.40.20161221.0239-1.el6.i686: failure: graphviz-plugins-gd-2.40.20161221.0239-1.el6.i686.rpm from graphviz-stable: [Errno 256] No more mirrors to try.
+
 
 说是要更新rpm，参考[7]，结果搞了一个多小时还是没鸟用，建议遇到同样问题的朋友，不要再走这条路了，前车之鉴！！！
 
 
-**最终解决办法**
+**最终解决办法：**
+
 因为提示下载不了依赖库，所以直接去官网提供的对应版本的的rpm包安装
-从官网[yum repository](http://www.graphviz.org/Download_linux_rhel.php)下载，找到对应版本的（比如自己的linux是l6-i386的版本，可以用uname -a查看自己的linux系统），然后右键要下载的包，复制网址出来，用wget命令下载
+从官网[yum repository](http://www.graphviz.org/Download_linux_rhel.php)下载，找到对应版本的（比如自己的linux是l6-i386的版本，可以用uname -a查看自己的linux系统），然后右键要下载的包，复制网址出来，用wget命令分别下载：
+
 * graphviz-x-2.38.0-1.el6.i686.rpm
+
 安装这个的时候很快就安装好了
+
 * graphviz-gd-2.38.0-1.el6.i686.rpm
+
 也是很快就安装好了
+
 * graphviz-libs-2.38.0-1.el6.i686.rpm
+
 这个比较慢一点，因为他把grahpviz也一起安装好了，应该算是依赖库的关系
+
 * graphviz-2.38.0-1.el6.i686.rpm
+
 提示已经安装了，所以这里其实不用安装了
+
 * 测试：
+* 
 参考[6]
 能够成功生成图片，搞定！
 
@@ -250,9 +263,15 @@ Error Downloading Packages:
 # 参考
 
 [1]gperftools目录下的INSTALL文件
+
 [2][Google Perftools简介与使用](http://blog.csdn.net/turkeyzhou/article/details/8794188)
+
 [3][error while loading shared libraries的解決方法 ](http://www.cnblogs.com/amboyna/archive/2008/02/06/1065322.html)
+
 [4][CentOS安装Graphviz（使用EPEL）](http://blog.csdn.net/mtawaken/article/details/12832897)
+
 [5]http://www.thegeekstuff.com/2012/06/enable-epel-repository/
+
 [6][我使用过的Linux命令之dot - 绘制DOT语言脚本描述的图形](http://codingstandards.iteye.com/blog/840055)
-[7][](http://www.360doc.com/content/15/0424/11/22890708_465637436.shtml)
+
+[7][yum [Errno 256] No more mirrors to try 解决方法](http://www.360doc.com/content/15/0424/11/22890708_465637436.shtml)
