@@ -28,7 +28,7 @@ vector subscript out of range
 4. reserve会改变空间大小，那么地址会变，得去验证一下。
 
 # release和debug的区别
-看一下代码就很容易知道了，Debug下面Level为2的时候才有，如果设置了vs的Level也可能会不报错。
+看一下代码就很容易知道了，Debug下面Level为2的时候才有，如果设置了vs的Level也就不会报错。
 ```
     reference operator[](size_type _Pos)
         {    // subscript mutable sequence
