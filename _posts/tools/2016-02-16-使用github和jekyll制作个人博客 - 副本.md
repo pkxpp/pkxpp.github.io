@@ -97,6 +97,8 @@ categories: tools
 
 ```
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
+//后面有改了@2019/02/01
+gem sources -a https://gems.ruby-china.com/
 ```
 
 
