@@ -55,6 +55,8 @@ ImportError: DLL load failed: 找不到指定的模块。
 
 * [cuda下载](https://developer.nvidia.com/cuda-zone)
 
+![cuda下载](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/cuda_download.png?raw=true)
+
 我这里默认点完自己系统的配置（win10x64）得到的是最新的cuda10-win10，可以点击最右边的Legacy Releases看到更早一点的版本
 
 * cuda安装和验证
@@ -65,7 +67,7 @@ ImportError: DLL load failed: 找不到指定的模块。
 
 * [cudnn下载](https://developer.nvidia.com/rdp/cudnn-download)
 要登录nvidia developer账号
-
+![cuda下载](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/cudnn-download.png?raw=true)
 点开最下面的Archived cuDNN Releases可以看到更多的版本，因为我下载的是cuda-9.0，稳妥起见，我下载的cudnn版本是：*Download cuDNN v7.0.5 (Dec 5, 2017), for CUDA 9.0*
 按照道理来讲这里的*Download cuDNN v7.5.0 (Feb 21, 2019), for CUDA 9.0*应该也可以，下次验证再确认一下。
 
@@ -77,7 +79,7 @@ ImportError: DLL load failed: 找不到指定的模块。
 cuda路径：C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0
 
 （2）把CUDA路径添加到环境变量的CUDA_PATH中
-
+![cuda下载](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/cuda-path.png?raw=true)
 cuda本书在安装的时候会把cuda的安装路径添加的环境变量的path中（**注意**：是在path的最前面，不容易看到），所以不必自己把cuda的路径添加到path中
 
 > 这里自己是把解压后的cudnn放到d盘，比如：D\cuda，然后把D:\\cuda\bin放到了path中，因为网上有些人是这样建议的。但是看cudn的安装指南并没有提及到，所以感觉应该不需要
