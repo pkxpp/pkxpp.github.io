@@ -12,6 +12,10 @@ categories: tools
 
 （2）了解到了每个github帐号只能搭建一个博客，但是可以为每个项目单独简历一个博客，有两点需要注意：
 
+
+
+
+
 * github帐号唯一的博客的项目名需要是username.github.io的形式
 * 每个项目单独的博客需要简历一个分支，名字为gh-pages
 

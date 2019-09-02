@@ -12,6 +12,10 @@ time: 2018/12/27
 # 问题描述
 今天遇到一个问题，有同事使用vector的reserve并且直接取第一个元数来用，伪代码如下：
 
+
+
+
+
 	m_arrsAP.reserve(uCount);
 	AP* pAP = &m_arrsAP[0];
 
