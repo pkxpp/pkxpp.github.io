@@ -21,15 +21,19 @@ tag: engine
 
 很疑惑，为什么要这么做，以及怎么做的？
 
+
+
+
+
 # 结构
 ## Lookup Tree
 变量本身的一个树形结构，主要是记录一下某个变量是某个结构体的成员这样的父子关系。这个关系给Definition Tree提供了基础。如下图所示：
-![variable-tree]()
+![variable-tree](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/variable-tree.jpg?raw=true)
 
 ## Definition Tree
 用变量的结构构造一个字符串对应的树形结构，如下图所示：
 
-![string-tree]()
+![string-tree](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/string-tree.jpg?raw=true)
 
 
 ## 小结
