@@ -26,6 +26,8 @@ tag: engine
 
 
 # 结构
+怎么做到的呢？根据变量的结构，构建一个简单的树形结构Lookup Tree，在此基础上，构建一个字符串对应的树形结构Definition Tree。两颗树形结构的关系一致，根据这个在Definition Tree中找到某个变量的偏移值，就可以在Lookup Tree上找到真正的地址，然后根据类型操作这个地址即可。
+
 ## Lookup Tree
 变量本身的一个树形结构，主要是记录一下某个变量是某个结构体的成员这样的父子关系。这个关系给Definition Tree提供了基础。如下图所示：
 ![variable-tree](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/variable-tree.jpg?raw=true)
