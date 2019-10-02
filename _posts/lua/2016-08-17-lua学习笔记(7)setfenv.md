@@ -12,6 +12,10 @@ categories: lua
 
 说明一下stack level的意思，Level 1是调用setfenv的函数，Level 2是调用setfenv函数再上一层的调用函数，依此类推。
 
+
+
+
+
 # 使用
 
 ## 示例代码：

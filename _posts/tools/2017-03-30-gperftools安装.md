@@ -10,6 +10,10 @@ categories: tools
 
 网上有很多介绍google performance tools(gperftools)的文章，但是自己在安装的过程还是不断的遇到问题，即使是第二次再装的时候，所以把一些问题记录下来，希望对其他跟我一样遇到问题的人有用。
 
+
+
+
+
 # 环境
 
 * Linux: Centos-6.5
