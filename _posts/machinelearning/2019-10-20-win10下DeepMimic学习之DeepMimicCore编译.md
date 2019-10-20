@@ -18,6 +18,10 @@ tag: DeepMimic
 最终，会生成一个*DeepMimicCore.py*的文件
 
 
+
+
+
+
 # 问题解决
 
 
@@ -116,22 +120,19 @@ tag: DeepMimic
 	1>LINK : fatal error LNK1181: 无法打开输入文件“BulletDynamics.lib”
 ```
 * 解决
-（1）改一下配置，默认是这样的
+（1）改一下配置，默认如下图所示，把_vs2010_x64_release这一截去掉
 
-（2）参考[4]改需要的静态库
+![glew_output_cofig](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/glew_output_config.png?raw=true)
+
+（2）参考[4]改需要的静态库，下表四个即可
 
 
 | 工程名 | 备注 |
-
 |---|---|
-
-|BulletCollision|
-
-|BulletDynamics	|
-
-|BulletSoftBody	|
-
-|LinearMath|
+|BulletCollision| |
+|BulletDynamics	| |
+|BulletSoftBody	| |
+|LinearMath| |
 
 
 ## 8.链接错误，找不到符号
