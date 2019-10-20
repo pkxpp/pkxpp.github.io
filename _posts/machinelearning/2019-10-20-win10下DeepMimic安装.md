@@ -47,12 +47,16 @@ github主页[1]已经列出来了所有依赖和linux的安装，windows下面�
 
 cmake-gui生成的时候选择带64位的，如下图所示
 
+![cmakeX64](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/cmakeX64.png?raw=true)
 
+
+## 3.MPI
+
+看到一篇帖子[4]说注意windows下面两个都安装，以为是一样的，就装了一个.后面我装完msmpisdk.msi之后，再安装msmpisetup.exe提示错误。后面发现貌似也没啥问题~
 
 
 # 总结
 * 1.注意各个需要编译的工程的版本，是win32还是x64
-* 2.
 
 # 参考
 [1][DeepMimic github主页](https://github.com/xbpeng/DeepMimic)
