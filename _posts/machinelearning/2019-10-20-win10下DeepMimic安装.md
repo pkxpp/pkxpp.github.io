@@ -11,6 +11,10 @@ tag: DeepMimic
 
 github主页[1]已经列出来了所有依赖和linux的安装，windows下面遇到了一些问题，不妨记录下来。
 
+
+
+
+
 ## 1.Eigen
 * **关键点**：要用管理员权限运行vs，这样编译install的时候会安装到c盘下面
 
@@ -54,6 +58,7 @@ cmake-gui生成的时候选择带64位的，如下图所示
 
 看到一篇帖子[4]说注意windows下面两个都安装，以为是一样的，就装了一个.后面我装完msmpisdk.msi之后，再安装msmpisetup.exe提示错误。后面发现貌似也没啥问题~
 
+![MPI](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/MPI.png?raw=true)
 
 # 总结
 * 1.注意各个需要编译的工程的版本，是win32还是x64
@@ -62,4 +67,7 @@ cmake-gui生成的时候选择带64位的，如下图所示
 [1][DeepMimic github主页](https://github.com/xbpeng/DeepMimic)
 
 [2][windows从零搭建OpenGL freeglut环境](https://blog.csdn.net/linian71/article/details/68485494)
+
 [3][解决Opengl编译时error](https://blog.csdn.net/rodgeliao/article/details/7024094)
+
+[4][DeepMimic环境配置](https://note.youdao.com/ynoteshare1/index.html?id=097cb5f90e53bc8d8b662439f3cb4285&type=note)
