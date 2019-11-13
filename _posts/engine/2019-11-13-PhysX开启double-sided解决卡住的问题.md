@@ -11,6 +11,10 @@ tags: engine physX
 有个楼梯的斜面的normal反了，结果会导致模型卡在这个楼梯走不出来，类似于一个封闭的盒子。因为模型现在改不了的缘故，所以就准备技术上先解决一下：**启用double-sided的功能。**
 
 
+
+
+
+
 * PVD正面看到楼梯，看不到斜面
 ![stair front](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/stair_front.png?raw=true)
 
