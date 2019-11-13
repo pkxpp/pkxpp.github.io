@@ -12,13 +12,13 @@ tags: engine physX
 
 
 * PVD正面看到楼梯，看不到斜面
-![stair front]()
+![stair front](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/stair_front.png?raw=true)
 
 * PVD反面看到的斜面
-![stair back]()
+![stair back](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/stair_back.png?raw=true)
 
 * 组合起来看到一个内部封闭的空间，胶囊体掉进来就卡主了
-![stair box]()
+![stair box](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/stair_box.jpg?raw=true)
 
 # 创建double-sided的mesh
 
@@ -29,7 +29,7 @@ PhysX默认是只创建一面三角形的，在PVD里面也可以看到从背面
 					PxQuat(gScaleRotaion.x, gScaleRotaion.y, gScaleRotaion.z, gScaleRotaion.w)), PxMeshGeometryFlag::eDOUBLE_SIDED);
 ```
 PVD的double-sided效果，正面是可以看到斜面的了
-![stair double-sided]()
+![stair double-sided](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/stair_double_sided.jpg?raw=true)
 
 这样在PVD里面就可以看到生效了，斜面正反面都可以看到了。但是，胶囊体还是卡在里面~
 
