@@ -19,49 +19,53 @@ tags: engine physX
 
 测试代码：
 * router.js文件
+
 ```
-const zmq = require("zeromq")
-
-async function run() {
-  const sock = new zmq.Router
-  await sock.bind("tcp://127.0.0.1:3000")
-  console.log("Worker connected to port 3000")
-
- while (true) {
-    await sock.send("some work")
-
- const [id, msg] = await sock.receive()
- console.log('msg = ', id, msg.toString())
-
- sock.send([id, "I,m broker."])
-  }
-}
-
-run()
-```
-* dealer.js
-```
-const zmq = require("zeromq")
-
-async function run() {
-  await sock.connect("tcp://127.0.0.1:3000")
-  console.log("Producer bound to port 3000")
-
-  while (true) {
-    await sock.send("some work")
+	const zmq = require("zeromq")
 	
- const [msg] = await sock.receive()
- console.log('msg = ', msg.toString())
-   
-    await new Promise(resolve => setTimeout(resolve, 500))
-  }
-}
+	async function run() {
+	  const sock = new zmq.Router
+	  await sock.bind("tcp://127.0.0.1:3000")
+	  console.log("Worker connected to port 3000")
+	
+	 while (true) {
+	    await sock.send("some work")
+	
+	 const [id, msg] = await sock.receive()
+	 console.log('msg = ', id, msg.toString())
+	
+	 sock.send([id, "I,m broker."])
+	  }
+	}
 
-run()
+	run()
+```
+
+* dealer.js
+
+```
+	const zmq = require("zeromq")
+
+	async function run() {
+	  await sock.connect("tcp://127.0.0.1:3000")
+	  console.log("Producer bound to port 3000")
+	
+	  while (true) {
+	    await sock.send("some work")
+		
+	 const [msg] = await sock.receive()
+	 console.log('msg = ', msg.toString())
+	   
+	    await new Promise(resolve => setTimeout(resolve, 500))
+	  }
+	}
+
+	run()
 ```
 
 
 
 # 参考
 [1][zmq-github](https://github.com/zeromq/zeromq.js)
+
 [2][zeromq.js-router](http://zeromq.github.io/zeromq.js/classes/router.html)
