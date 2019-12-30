@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-categories: node zmq
-tags: engine physX
+categories: gameserver
+tags: node zmq
 ---
 
 [TOC]
