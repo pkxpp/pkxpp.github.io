@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: gameserver
+categories: node
 tags: node zmq
 ---
 
