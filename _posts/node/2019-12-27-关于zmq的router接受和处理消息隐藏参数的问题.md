@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: node, zmq
+categories: node zmq
 tags: engine physX
 ---
 
