@@ -6,7 +6,13 @@ tags: node zmq
 ---
 
 [TOC]
+
 因为最近在弄一个nodejs的服务端，结果用的zeromq实现的rpc。结果发现rpc会出现卡住的情况，打印消息之后主要是zeromq消息丢了，发送之后，接收端没有收到。然后发现示例代码中用的是async/await这种异步调用，不太明白，所以找了些资料学习了一下，做一下笔记
+
+
+
+
+
 
 # 问题
 1. zeromq中为什么用异步方式？
@@ -168,11 +174,19 @@ function sendMsg(server, msg, uniqueId) {
 ```
 # 参考
 [1][Nodejs 异步处理的演进](https://www.jianshu.com/p/db31116e6d71)
+
 [2][Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
 [3][Promise使用](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
+
 [4][箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
 [5][async](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)
+
 [6][await](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await)
+
 [7][Nodejs 中使用 Async/Await](https://juejin.im/post/5a733ab95188255efc5f24d1)
-[8][](https://www.zcfy.cc/article/mastering-async-await-in-node-js-risingstack)
+
+[8][async/await](https://www.zcfy.cc/article/mastering-async-await-in-node-js-risingstack)
+
 [9][掌握 Node.js 中的 async/await](https://www.zcfy.cc/article/mastering-async-await-in-node-js-risingstack)
