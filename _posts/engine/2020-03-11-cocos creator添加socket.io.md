@@ -9,6 +9,10 @@ tags: engine cocos socket.io
 
 cocos客户端要用到socket.io，发现有问题，参考了网上的文档，有些有点过时了，重新补一个
 
+
+
+
+
 # 步骤
 * 下载socket.io
 **注意：是需要下载客户端**，一开始直接把socket.io的GitHub下载下来了，发现并不是这么用的
