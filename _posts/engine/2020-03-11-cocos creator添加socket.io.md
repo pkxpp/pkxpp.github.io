@@ -17,7 +17,7 @@ cocos客户端要用到socket.io，发现有问题，参考了网上的文档，
 下载连接：参考[6]
 
 最终拿到一个socket.io.js的文件
-
+![socket.io-client](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/socket.io-client.jpg?raw=true)
 
 * 修改文件内容
 
@@ -32,11 +32,11 @@ cocos客户端要用到socket.io，发现有问题，参考了网上的文档，
 * 添加到cocos creator中
 
 这个很简单，直接拖到界面的script中之后就可以了，其实就是复制过去
-
+![add script to cocos creator](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/add%20script.jpg?raw=true)
 
 * 设置插件
 参考[5]，在资源管理器中点击socket.io.js这个文件，在属性检查其里面勾上导入插件，即可
-
+![script snippet of cocos creator](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/cocos%20creator%20script%20snippets.jpg?raw=true)
 
 > 参考[4]中说的需要在onLoad函数中添加一个什么语句，是不需要的，估计是老的版本。最新的版本是不需要的
 
