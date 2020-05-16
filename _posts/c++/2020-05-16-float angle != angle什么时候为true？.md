@@ -147,5 +147,4 @@ snan 0 11111111 01000000000000000000000
 [6][20.5.2 Infinity and NaN](https://www.gnu.org/software/libc/manual/html_node/Infinity-and-NaN.html)
 
 [7][IEEE User's Guide](https://www.cenapad.unicamp.br/parque/manuais/Xlf/UG42.HTM)
-
 [8][What is difference between quiet NaN and signaling NaN?](https://stackoverflow.com/questions/18118408/what-is-difference-between-quiet-nan-and-signaling-nan)
