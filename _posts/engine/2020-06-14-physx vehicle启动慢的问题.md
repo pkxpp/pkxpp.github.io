@@ -8,6 +8,10 @@ tags: engine cocos socket.io
 @[toc]
 把PhysX vehicle接到我们miniclient中，发现按w键，车子要好半天才启动起来~
 
+
+
+
+
 # 经历
 ## 1.各种修改数据，阻尼，弹簧啥的
 参考[1]
