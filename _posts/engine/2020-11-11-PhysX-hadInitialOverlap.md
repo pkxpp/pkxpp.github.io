@@ -69,7 +69,7 @@ struct PxLocationHit : public PxQueryHit
 
 * PVD图
 
-![1]()
+![1](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-overlap1.jpg?raw=true)
 
 * 结果
 
@@ -87,7 +87,7 @@ hitSweep.block.hadInitialOverlap() = false
 
 * PVD图
 
-![2]()
+![2](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-overlap2.jpg?raw=true)
 
 * 结果
 
@@ -105,7 +105,7 @@ hitSweep.block.hadInitialOverlap() = false
 
 * PVD图
 
-![3]()
+![3](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-overlap3.jpg?raw=true)
 
 * 结果
 
