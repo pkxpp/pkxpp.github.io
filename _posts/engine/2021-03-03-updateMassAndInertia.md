@@ -21,7 +21,7 @@ tags: engine PhysX
 
 整个过程看下效果
 
-![updateMassAndInertia]()
+![updateMassAndInertia](../img/Physics_Attach_Shape_Update_Small.gif)
 
 可以看到这个PhysxActor的重心会根据添加的shape而发生变化
 
@@ -31,7 +31,7 @@ tags: engine PhysX
 (2)attach box + updateMassAndInertia
 (3)detach box，这里不调用*updateMassAndInertia*接口
 
-![not updateMassAndInertia]()
+![not updateMassAndInertia](../img/Physics_Attach_Shape_Small.gif)
 
 # 总结
 * 1.*updateMassAndInertia*影响的质量其实是影响了重心
