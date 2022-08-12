@@ -54,9 +54,10 @@
 </script>
 {% endif %}
 -->
-{% if page.latex == true %}
-     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML">
-     </script>
-{% endif %}
+{% if page.mathjax %}
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+{% end if %}
 
 </head>
