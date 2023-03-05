@@ -112,7 +112,7 @@ FastBuil -clean -dist
 
 我这边把网上很多帖子都看了一遍，结果发现我情况都是对的，但是就是不在工作机工作，任务一直没有发布到工作机。log也显示有workers，工作机也显示connection
 
-![connection](../img/fast%20build%20connection.png)
+![connection](../img/fastbuild%20connection.jpg)
 ```
 > FBuild.exe -clean -dist -forceremote
 2 workers found in '\\10.11.180.117\FASTBuildBroker\main\22.windows\'
