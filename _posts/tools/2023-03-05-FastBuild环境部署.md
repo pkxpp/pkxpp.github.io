@@ -39,6 +39,7 @@ F:.
 
 * 1.写Fbuild.bff文件
 * 2.运行
+命令如下：
 ```
 // 本地编译
 FBuild.exe -clean
@@ -81,6 +82,7 @@ F:\study\engine\FastBuild\FASTBuild-Src-v1.08\dist_v1.08\External\SDK\Clang\Wind
 
 ## 2. 分布式编译不成功
 参考[1]说的我都满足了，但是就是没有在工作机上编译
+
 参考[3]这个文档也很好，也说了一些问题的解决办法
 
 **原因：**
@@ -109,13 +111,14 @@ FastBuil -clean -dist
 * 工作机能力太强
 
 我这边把网上很多帖子都看了一遍，结果发现我情况都是对的，但是就是不在工作机工作，任务一直没有发布到工作机。log也显示有workers，工作机也显示connection
+
 ![connection](../img/fast%20build%20connection.png)
 ```
 > FBuild.exe -clean -dist -forceremote
 2 workers found in '\\10.11.180.117\FASTBuildBroker\main\22.windows\'
 ```
 
-直到我看到了-forceremote参数，并且试了一下，就里面搞定了。原来是任务只有一个，默认先本地执行了，我本机有8核，所以理论上<8的任务都只会在本地执行了。加完-forceremote参数后，我笑了 ^_^
+直到我看到了-forceremote参数，并且试了一下，就里面搞定了。原来是任务只有一个，默认先本地执行了，我本机有8核，所以理论上小于8的任务数量都只会在本地执行了。加完-forceremote参数后，我笑了 ^_^
 
 
 
@@ -125,7 +128,6 @@ FastBuil -clean -dist
 
 ![remote worker](../img/remote%20worker.jpg)
 
-## 3.
 
 # 参考
 [1][保姆式教你使用FASTBuild对UE4进行联机编译](https://zhuanlan.zhihu.com/p/158400394)
