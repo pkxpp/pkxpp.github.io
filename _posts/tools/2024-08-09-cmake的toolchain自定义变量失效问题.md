@@ -2,7 +2,7 @@
 layout: post
 comments: true
 categories: tools
-tags: FastBuild
+tags: cmake toolchain
 ---
 
 
@@ -19,17 +19,11 @@ tags: FastBuild
 toolchain的用途官网解释的很清楚\[1\]，主要是为了交叉编译
 
 
-
 * Cross-compiling
-
-
 
 > Cross-compiling a piece of software means that the software is built on one system, but is intended to run on a different system.
 
-
-
 # 分析
-
 
 ## 测试用例
 官网代码拿过来整一个简单的测试用例\[2\]
