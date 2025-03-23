@@ -9,7 +9,8 @@ description: Pages's Ideas & Blogs
 
 # baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
-url: "http://pkxpp.github.io"
+# url: "http://pkxpp.github.io"
+url: "/"
 # twitter_username: jekyllrb
 github_username: pkxpp
 permalink: /:year/:month/:day/:title/
