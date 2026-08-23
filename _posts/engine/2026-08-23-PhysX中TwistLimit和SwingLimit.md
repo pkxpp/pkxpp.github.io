@@ -26,7 +26,7 @@ tags: engine PhysX
 
 ![image](../img/physx-twist-x-axis-motion.gif)
 
-测试代码
+测试代码：
 
 ```cpp
 // 期望小腿前后摆是Twist决定的
