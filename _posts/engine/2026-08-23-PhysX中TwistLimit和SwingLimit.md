@@ -23,7 +23,7 @@ tags: engine PhysX
 
 效果
 
-![image](../img/physx-twist-x-axis-motion.gif)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-twist-x-axis-motion.gif?raw=true)
 
 测试代码：
 
@@ -69,7 +69,7 @@ PxD6Joint* CreateDampedD6(PxRigidActor* a0, const PxTransform& t0, PxRigidActor*
 
 PVD（调成了左手系）
 
-![image](../img/physx-pvd-left-handed-coordinate-system.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-left-handed-coordinate-system.png?raw=true)
 
 绕x轴旋转的话Twist的范围刚好是[-60, 60]
 
@@ -91,13 +91,13 @@ PVD（调成了左手系）
 
 可以看到PxJointAngularLimitPair本身是可以自己定义范围的，只是UE里面的Twist角度表示的是[-A, A]的意思
 
-![image](../img/physx-twist-range-0-to-120.gif)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-twist-range-0-to-120.gif?raw=true)
 
 PVD
 
-![image](../img/physx-pvd-twist-range-0-to-120.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-twist-range-0-to-120.png?raw=true)
 
-![image](../img/physx-pvd-twist-range-0-to-120-annotated.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-twist-range-0-to-120-annotated.png?raw=true)
 
 开始是这么理解的：
 
@@ -105,23 +105,23 @@ PVD
 
 后来发现不对，往后看。
 
-![image](../img/physx-twist-right-handed-zero-pose.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-twist-right-handed-zero-pose.png?raw=true)
 
 这个图片里面是右手，绕Y轴旋转120°就是正确的。不考虑零点位是Y轴正负方向，就是Y轴，用右手法则带进去就是对的。这个时候你想象一下子骨骼在下面，也是绕Y轴选装，右手法则也是对的。**所谓的零点位不是当前坐标系（子坐标系？）的Y轴正负方向，而是当前子骨骼的Y轴方向（如果子骨骼在下面，那么它的Y轴方向就是向下，如果它在上面，它的Y轴方向就是向上**）
 
-![image](../img/physx-pvd-twist-right-handed-zero-pose.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-twist-right-handed-zero-pose.png?raw=true)
 
 结果和预期竟然不一样\~
 
 * 胶囊体在x轴方向
 
-![image](../img/physx-twist-capsule-x-axis-motion.gif)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-twist-capsule-x-axis-motion.gif?raw=true)
 
-![image](../img/physx-twist-capsule-x-axis-snippet.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-twist-capsule-x-axis-snippet.png?raw=true)
 
 绕Y轴旋转，零点位是x轴负方向的话，好像是对的。胶囊体的零点位确是x轴正方向，也是右手坐标系，绕y轴旋转。两者都看起来是对的，但是感觉有点奇怪
 
-![image](../img/physx-pvd-capsule-x-axis-coordinate.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-capsule-x-axis-coordinate.png?raw=true)
 
 注意：joint的坐标系发生了绕z轴旋转90°的情况
 
@@ -143,13 +143,13 @@ PVD
 
 所以joint坐标系应该长这样
 
-![image](../img/physx-pvd-joint-frame-rotated-z-90.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-joint-frame-rotated-z-90.png?raw=true)
 
 去看前面零点位的定义，再来看这里的零点位：子骨骼自己的方向（子骨骼的位置在joint的位置，长度是朝-y轴方向）是零点位。然后根据右手坐标系，所以如图胶囊体向屏幕里面折过去是对的。如果如果较真的话，这里PVD画的不太对。
 
 PVD
 
-![image](../img/physx-pvd-left-handed-twist-limit.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-left-handed-twist-limit.png?raw=true)
 
 再来看左手系，也是绕轴旋转了90°，这个时候joint的x轴是朝上的，y朝做的，零点位是子骨骼朝向，左手系看图中完全符合
 
@@ -157,11 +157,11 @@ PVD
 
 x轴没有旋转，所以真正的Twist是转动，绕y轴旋转，如下图所示
 
-![image](../img/physx-twist-y-axis-motion.gif)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-twist-y-axis-motion.gif?raw=true)
 
-![image](../img/physx-pvd-twist-y-axis-motion.gif)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-twist-y-axis-motion.gif?raw=true)
 
-![image](../img/physx-pvd-twist-zero-pose-y-axis.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-twist-zero-pose-y-axis.png?raw=true)
 
 绕x轴旋转，零位点还是y轴方向
 
@@ -226,31 +226,31 @@ joint->setSwingLimit(PxJointLimitCone(swingLimit, swingLimit, 0.05f));
 
 从下面图里可以看出范围是\[-45, 45\]了。**而且基本确定Swing1和Swing2都是limit表示的范围是\[-A, A\]**。
 
-![image](../img/physx-swing1-horizontal-limit-motion.gif)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-swing1-horizontal-limit-motion.gif?raw=true)
 
 * PVD
 
-![image](../img/physx-pvd-swing1-horizontal-limit.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-swing1-horizontal-limit.png?raw=true)
 
 Swing1是绕y轴旋转，零点位是x轴
 
 #### 垂直方向
 
-![image](../img/physx-swing1-vertical-limit-motion.gif)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-swing1-vertical-limit-motion.gif?raw=true)
 
 还是绕y轴选装，零点位是x轴方向
 
-![image](../img/physx-pvd-swing1-vertical-limit.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-swing1-vertical-limit.png?raw=true)
 
 ### Swing2
 
 * 效果
 
-![image](../img/physx-swing2-limit-motion.gif)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-swing2-limit-motion.gif?raw=true)
 
 * PVD
 
-![image](../img/physx-pvd-swing2-limit.png)
+![image](https://github.com/pkxpp/pkxpp.github.io/blob/master/_posts/img/physx-pvd-swing2-limit.png?raw=true)
 
 * 绕z轴旋转，零点位是y轴方向
 
