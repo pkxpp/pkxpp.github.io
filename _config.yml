@@ -18,6 +18,12 @@ viewsourceroot: https://github.com/pkxpp/pkxpp.github.io/
 # this is the url root of the create page link on the footer page.
 newsourceroot: http://pkxpp.github.io
 #########################################
+# giscus commenting system
+giscus_repo: pkxpp/pkxpp.github.io
+giscus_repo_id: MDEwOlJlcG9zaXRvcnk1MTcyMzA2MQ==
+giscus_category: Announcements
+giscus_category_id: DIC_kwDOAxU7Nc4DEXpy
+
 # for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com. 
 # duoshuo_shortname: whu-page
 # duoshuo_url: "http://pkxpp.github.io"
